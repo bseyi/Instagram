@@ -85,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.logOutBtn){
             Intent i = new Intent(this, LoginActivity.class);
-            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // this makes sure the Back button won't work
-            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // same as above
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             ParseUser.logOutInBackground();
             ParseUser currentUser = ParseUser.getCurrentUser();
             finish();

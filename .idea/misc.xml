@@ -4,13 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.12108980827447023" />
+        <entry key="app/src/main/res/font/font_styles.xml" value="0.4328125" />
+        <entry key="app/src/main/res/font/lobster_italic.xml" value="0.4328125" />
         <entry key="app/src/main/res/layout/activity_details.xml" value="0.34692028985507245" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_timeline.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/fragment_compose.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_post.xml" value="0.1691995947315096" />
-        <entry key="app/src/main/res/layout/item_post.xml" value="0.3185595567867036" />
+        <entry key="app/src/main/res/layout/item_post.xml" value="0.335" />
         <entry key="app/src/main/res/menu/log_out.xml" value="0.40260416666666665" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/xml/fileprovider.xml" value="0.1" />

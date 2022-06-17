@@ -43,7 +43,7 @@ public class ComposeFragment extends Fragment {
     private EditText etDescription;
     private ImageView ivPost;
     private File photoFile;
-    public String photoFileName = "photo.jpg";
+    private final String photoFileName = "photo.jpg";
 
 
     public ComposeFragment() {
@@ -131,10 +131,8 @@ public class ComposeFragment extends Fragment {
             @Override
             public void done(ParseException e) {
                 if (e != null){
-                    Log.e(TAG, "Error while saving", e);
                     Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
                 }
-                Log.i(TAG, "Post save success", e);
                 etDescription.setText("");
                 ivPost.setImageResource(0);
             }

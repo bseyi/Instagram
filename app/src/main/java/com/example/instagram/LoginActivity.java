@@ -13,14 +13,16 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 import java.lang.reflect.Parameter;
 
 public class LoginActivity extends AppCompatActivity {
 
-    public static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText etPassword;
+    private String username;
+    private String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,23 +38,47 @@ public class LoginActivity extends AppCompatActivity {
         Button btnLogin = findViewById(R.id.btnLogin);
     }
     public void signInBtnClick(View view){
-        String username = etUsername.getText().toString();
-        String password = etPassword.getText().toString();
+        username = etUsername.getText().toString();
+        password = etPassword.getText().toString();
         loginUser(username, password);
     }
 
+    public void signUpBtnClick(View view){
+        username = etUsername.getText().toString();
+        password =  etPassword.getText().toString();
+        logoutUser(username, password);
+
+    }
+
     private void loginUser(String username, String password){
-        Log.i(TAG,"Attempting to login " + username );
         ParseUser.logInInBackground(username, password, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
                 if (e != null){
-                    Log.e(TAG, "Issue with login", e);
                     Toast.makeText(LoginActivity.this, "Issue with login", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 goMainActivity();
-                Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Success with login ", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+    private void logoutUser(String username, String password){
+        ParseUser user = new ParseUser();
+
+        user.setUsername(username);
+        user.setPassword(password);
+        user.signUpInBackground(new SignUpCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e != null){
+                    Toast.makeText(LoginActivity.this, "Issue with signup", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                loginUser(username, password);
+                Toast.makeText(LoginActivity.this, "Success with signup", Toast.LENGTH_SHORT).show();
             }
         });
     }

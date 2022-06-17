@@ -4,6 +4,14 @@
 
 
     <item
+        android:icon="@drawable/instagram_new_post_outline_24"
+        android:title="Item"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/ufi_heart"
+        android:title="Item"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/logOutBtn"
         android:icon="@drawable/logout"
         android:title="@string/item"
