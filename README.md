@@ -2,7 +2,7 @@
 
 **Switagram** is a photo sharing app using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **30** hours spent in total
 
 ## User Stories
 
@@ -41,7 +41,7 @@ The following **stretch** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/bseyi/Instagram/blob/master/h8eUKOMf%20(2)%20(2)%20(1).gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 
